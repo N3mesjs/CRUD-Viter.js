@@ -10,7 +10,7 @@ function App() {
   const [userIds, setUserIds] = useState<{ id: number }[]>([]);
 
   useEffect(() => {
-    fetch('http://localhost:4000/api/user-ids')
+    fetch('http://localhost:4000')
       .then(response => response.json())
       .then(data => setUserIds(data))
       .catch(error => console.error('Errore durante il recupero degli ID degli utenti:', error));
